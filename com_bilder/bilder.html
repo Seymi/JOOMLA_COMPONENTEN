@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  max-width: 70%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image</h2>
+
+<p>Responsive images will automatically adjust to fit the size of the screen.</p>
+<p>Resize the browser window to see the effect:</p>
+
+<img src="images/20230708_130959.jpg" alt="Martin" width="1000" height="300">
+
+<img src="images/20230708_131012.jpg">
+
+<img src="images/20230708_130857.mp4">
+
+
+</body>
+</html>
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+

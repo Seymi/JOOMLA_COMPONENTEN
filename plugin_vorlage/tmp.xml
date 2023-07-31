@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="x.y" group="content" method="upgrade">
+    <name>plugin_vorlage</name>
+    <version>1.0.0</version>
+    <description>content plugin master copy</description>
+    <author>Martin Seymann</author>
+	<creationDate>July 2023</creationDate>
+    <license>http://www.gnu.org/licences/gpl</license>
+	<copyright>Copyright 2023 Martin Seymann. All rights reserved.</copyright>
+	<authorEmail>martin.seymann@chello.at</authorEmail>
+	<authorUrl>www.seymi.at</authorUrl>
+	<version>1.0.0</version>
+	<description>master copy to install a new Joomla! content plugin </description>
+	<files>
+		<filename plugin="plugin_vorlage">plugin_vorlage.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_plugin_vorlage.ini</language>
+		<language tag="en-GB">en-GB.plg_content_plugin_vorlage.sys.ini</language>
+	</languages>
+</extension>

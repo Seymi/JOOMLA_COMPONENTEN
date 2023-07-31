@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="bilder.css">
+</head>
+<body>
+
+<h2>Überschrift</h2>
+<p>Beschreibung</p>
+
+<img id="myImg" src="images/20230708_130959.jpg" alt="Martin" width="300" height="200">
+<img id="myImg" src="images/20230708_131012.jpg" alt="Martin" width="300" height="200">
+
+<video src="images/20230708_130857.mp4" controls>
+  Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+  Dieses Video zeigt den Donauspitz. Das ist die Stelle, wo der Donaukanal in die Donau fließt.
+</video>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>

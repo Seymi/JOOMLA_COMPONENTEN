@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+
+	<name>custom page</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>2023-07-26</creationDate>
+	<author>Martin Seymann</author>
+	<authorEmail>martin.seymann@chello.at</authorEmail>
+	<authorUrl>http://www.seymi.at</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>1.1.5</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>With this component you can add a custom page. Since Version 1.1.0 support of multiple languages. Since Version 1.1.5 with database table.</description>
+
+    <namespace path="src/">Joomla\Component\Custompage</namespace>
+
+    <files folder="site/">
+		<folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+ 	<languages>
+        <language tag="en-GB">site/language/en-GB/en-GB.com_custompage.ini</language>
+		<language tag="de-AT">site/language/de-AT/de-AT.com_custompage.ini</language>
+    </languages>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_custompage'>custom page!</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<folder>language</folder>
+            <folder>services</folder>
+			<folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+		</files>
+
+ 		<languages>
+            <language tag="en-GB">admin/language/en-GB/en-GB.com_custompage.ini</language>
+            <language tag="en-GB">admin/language/en-GB/en-GB.com_custompage.sys.ini</language>
+            <language tag="de-AT">admin/language/de-AT/de-AT.com_custompage.ini</language>
+            <language tag="de-AT">admin/language/de-AT/de-AT.com_custompage.sys.ini</language>
+        </languages>
+
+	</administration>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+</extension>

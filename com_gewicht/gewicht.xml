@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+
+	<name>gewicht</name>
+	<creationDate>2023-07-27</creationDate>
+	<author>Martin Seymann</author>
+	<authorEmail>martin.seymann@chello.at</authorEmail>
+	<authorUrl>http://www.seymi.at</authorUrl>
+	<copyright>Martin Seymann</copyright>
+	<license>GPL v3</license>
+	<version>0.0.2</version>
+	<description>Diese Joomla! 4.x Komponente ermöglicht es, das Gewicht und den Fettgehalt aufzuzeichnen.</description>
+
+    <namespace path="src/">Joomla\Component\Gewicht</namespace>
+
+    <files folder="site/">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+	<administration>
+		<menu link='index.php?option=com_gewicht'>Gewicht</menu>
+		<files folder="admin">
+            <folder>services</folder>
+			<folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+		</files>
+	</administration>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+</extension>

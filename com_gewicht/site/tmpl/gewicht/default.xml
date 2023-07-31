@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Gewicht">
+        <message><![CDATA[Gewicht]]></message>
+    </layout>
+    <fields name="request">
+        <fieldset name="request">
+            <field name="Gewichtseinheit"
+                   type="list"
+                   label="COM_GEWICHT_MENU_PARAM_LABEL"
+                   description="COM_GEWICHT_MENU_PARAM_DESC"
+                   default="1">
+                <option value="1"><![CDATA[kg]]></option>
+                <option value="2"><![CDATA[lbs]]></option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

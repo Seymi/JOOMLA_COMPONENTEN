@@ -1,0 +1,76 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type="component" version="1.0.0" client="site" method="upgrade">
+
+   <name>MVC component</name>
+   <author>Tutorials Point</author>
+   <version>1.0.0</version>
+   <description>Master copy of MVC.</description>
+
+   <files>
+      <filename>com_mvc.xml</filename>
+      <filename module = "com_mvc">com_mvc.php</filename>
+      <filename>index.html</filename>
+      <filename>helper.php</filename>
+      <filename>tmpl/default.php</filename>
+      <filename>tmpl/index.html</filename>
+   </files>
+
+   <config>
+   </config>
+
+</extension>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>Hello Seymi!</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>Juli 2023</creationDate>
+	<author>Martin Seymann based on John Doe</author>
+	<authorEmail>martin.seymann@chello.at</authorEmail>
+	<authorUrl>http://www.seymi.at</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.5</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Description of the Hello Seymi component ...</description>
+
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>helloseymi.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_mvc'>MVC!</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>helloseymi.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+		</files>
+	</administration>
+
+</extension>
